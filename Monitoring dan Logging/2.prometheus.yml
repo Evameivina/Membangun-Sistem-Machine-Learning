@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: 'mlflow_model'
+    static_configs:
+      - targets: ['localhost:8000']
+
+rule_files:
+  - "C:/Users/Eva/Documents/Eksperimen_SML_EvaMeivinaDwiana/Monitoring dan Logging/6.bukti alerting Grafana/notifikasi/*.yml"

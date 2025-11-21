@@ -1,0 +1,11 @@
+groups:
+  - name: request_latency_count_alerts
+    rules:
+      - alert: HighRequestLatencyCount
+        expr: request_latency_count > 100
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Jumlah request latency tinggi"
+          description: "Jumlah request latency melebihi 100 dalam 5 menit terakhir"

@@ -1,0 +1,11 @@
+groups:
+  - name: request_count_alerts
+    rules:
+      - alert: HighRequestCount
+        expr: request_count_total > 100
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Jumlah request tinggi"
+          description: "Request count total melebihi 100 dalam 5 menit terakhirr."
